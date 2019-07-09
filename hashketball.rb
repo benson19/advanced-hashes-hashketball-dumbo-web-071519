@@ -247,14 +247,14 @@ end
 def most_points_scored
   mostPoints = 0
   mostVP = ""
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players 
-        data.each do |players|
-          players.each do |name, val|
-            if val[:points] > mostPoints
-              mostPoints = val[:points]
-              mostVP = name
+    game_hash.each do |location, team_data|
+      team_data.each do |attribute, data|
+        if attribute == :players 
+          data.each do |players|
+            players.each do |name, val|
+              if val[:points] > mostPoints
+                mostPoints = val[:points]
+                mostVP = name
              end
           end
         end
@@ -322,7 +322,7 @@ def array_of_players
         data.each do |players|
           players.each do |name, val|
             #puts name
-             names << name
+              names << name
           end
         end
       end
@@ -332,9 +332,7 @@ def array_of_players
 end
 
 def player_with_longest_name
-  players = array_of_players.sort_by { 
-    |word| word.length 
-  }
+  players = array_of_players.sort_by {|word| word.length}
   return players[players.length - 1 ]
 end
 
