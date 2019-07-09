@@ -134,12 +134,3 @@ def good_practices
   end
 end
 
-
-
-
-
-
-
-
-
-
