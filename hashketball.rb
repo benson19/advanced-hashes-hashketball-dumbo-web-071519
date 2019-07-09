@@ -140,10 +140,10 @@ def num_points_scored(players_name)
       if attribute == :players 
         data.each do |players|
           players.each do |name, val|
-             #puts "name #{name}"
-             #puts "val #{val}"
-             if name == players_name
-              return val[:points] 
+            #puts "name #{name}"
+            #puts "val #{val}"
+              if name == players_name
+                return val[:points] 
              end
           end
         end
@@ -159,7 +159,7 @@ def shoe_size(players_name)
         data.each do |players|
           players.each do |name, val|
              if name == players_name
-              return val[:shoe] 
+               return val[:shoe] 
              end
           end
         end
@@ -215,7 +215,7 @@ def player_stats(players_name)
         data.each do |players|
           players.each do |name, val|
              if name == players_name
-              return val 
+               return val 
              end
           end
         end
