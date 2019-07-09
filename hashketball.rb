@@ -185,7 +185,7 @@ def team_names
       end
     end
   end 
-  return names
+names
 end
 
 def player_numbers(team_name)
@@ -205,7 +205,7 @@ def player_numbers(team_name)
       end
     end
   end 
-  return numbers  
+numbers  
 end
 
 def player_stats(players_name)
@@ -215,7 +215,7 @@ def player_stats(players_name)
         data.each do |players|
           players.each do |name, val|
              if name == players_name
-              return val 
+             val 
              end
           end
         end
@@ -241,7 +241,7 @@ def big_shoe_rebounds
       end
     end
   end    
-  return rebounds
+rebounds
 end  
 
 def most_points_scored
@@ -261,7 +261,7 @@ def most_points_scored
       end
     end
   end    
-  return mostVP
+mostVP
 end
 
 def all_stats
@@ -269,7 +269,7 @@ def all_stats
   homeStats = team_stats(:home)
   awayStats = team_stats(:away)
   stats = homeStats + awayStats
-  return stats
+stats
 end
 
 def team_stats(loc)
@@ -277,7 +277,7 @@ def team_stats(loc)
     if location == loc
       team_data.each do |attribute, data|
         if attribute == :players 
-          return data
+        data
         end
       end
     end
@@ -310,7 +310,7 @@ def winning_team
   end
 
   homeScore > awayScore ? winner = homeTeam : winner = awayTeam
-  return winner 
+winner 
 end
 
 def array_of_players
@@ -328,7 +328,7 @@ def array_of_players
       end
     end
   end 
-  return names  
+names  
 end
 
 def player_with_longest_name
@@ -353,13 +353,12 @@ def most_steals
       end
     end
   end
-  return playersName
+playersName
 end
 
 def long_name_steals_a_ton?
   name = player_with_longest_name
   steals = most_steals
   val = name == steals ? true : false
-  return val
-  
+val
 end
